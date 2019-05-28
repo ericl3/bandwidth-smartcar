@@ -102,6 +102,7 @@ class ConnectRouter {
             return vehicle.disconnect().then(connection => {
                 console.log(connection);
                 this.sendText(dest, "Car Disconnected: " + connection.status + "\n");
+                this.access = "unauthorized";
             })
         } else {
             this.sendText(dest, messages.unknownCommand);
