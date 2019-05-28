@@ -27,7 +27,7 @@ class ConnectRouter {
                 this.access = _access;
                 res.json(200);
                 this.smartcarClient.isCompatible('JTHCF1D23E5015551', ['read_location']).then(res => {
-                    this.bwClient.Message.send(res);
+                    this.bwClient.Message.send(res.compatible);
                 })
                 this.createVehicle();
             });
