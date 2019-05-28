@@ -8,7 +8,7 @@ const keys = require("./config/keys");
 
 // Set up apps
 const app = express().use(cors());
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 
 // Bring in routes
 //const ReceiveQueriesRouter = require("./routes/receive-query");
@@ -46,5 +46,5 @@ app.get("/", (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log("server running on port ${PORT}");
+    console.log(`server running on port ${PORT}`);
 });
