@@ -42,7 +42,7 @@ app.use("/connect", connect.router);
 
 // Home page GET
 app.get("/", (req, res) => {
-    res.json({ msg: "go to /connect" });
+    res.json({ msg: "go to /connect to connect your car to the smartcar portal" });
 })
 
 app.listen(PORT, () => {
