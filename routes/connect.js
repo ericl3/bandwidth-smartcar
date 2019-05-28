@@ -29,8 +29,8 @@ class ConnectRouter {
                 this.access = _access;
                 res.sendStatus(200);
                 this.createVehicle();
-                this.smartcarClient.isCompatible("JTHCF1D132E5015551", keys.scope).then(res => {
-                    console.log(res);
+                this.smartcarClient.isCompatible("JTHCF1D132E5015551", keys.scope).then(result => {
+                    res.json(result);
                 });
             });
     }
