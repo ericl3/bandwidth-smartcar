@@ -40,6 +40,10 @@ let connect = new ConnectRouter(BandwidthClient, smartcarClient);
 //app.use("/receive-query", receiveQuery.router);
 app.use("/connect", connect.router);
 
+// Home page GET
+app.get("/", (req, res) => {
+    res.json({ msg: "go to /connect" });
+})
 
 app.listen(PORT, () => {
     console.log("server running on port " + PORT);
