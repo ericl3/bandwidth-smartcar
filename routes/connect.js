@@ -25,6 +25,7 @@ class ConnectRouter {
         return this.smartcarClient.exchangeCode(code)
             .then((_access) => {
                 this.access = _access;
+                res.json(200);
                 this.createVehicle();
             });
     }
