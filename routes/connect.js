@@ -2,6 +2,7 @@ const express = require("express");
 const messages = require("../config/messages");
 const numbers = require("../config/numbers");
 const smartcar = require('smartcar');
+const keys = require("../config/keys");
 
 class ConnectRouter {
     constructor(BandwidthClient, smartcarClient) {
@@ -28,6 +29,9 @@ class ConnectRouter {
                 this.access = _access;
                 res.sendStatus(200);
                 this.createVehicle();
+                this.smartcarClient.isCompatible("JTHCF1D132E5015551", keys.scope).then(res => {
+                    console.log(res);
+                });
             });
     }
 
