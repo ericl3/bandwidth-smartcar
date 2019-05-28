@@ -34,7 +34,6 @@ class ConnectRouter {
         if (this.access === "unauthorized") {
             this.sendText(req.body.from, messages.unauthorized);
         } else {
-            //this.createVehicle(req.body.text, req.body.from);
             this.handleQuery(this.vehicle, req.body.text, req.body.from);
         }
     }
@@ -57,9 +56,7 @@ class ConnectRouter {
                 return data.vehicles
             })
             .then(vehicleIds => {
-                //const vehicle = new smartcar.Vehicle(vehicleIds[0], this.access.accessToken);
                 this.vehicle = new smartcar.Vehicle(vehicleIds[0], this.access.accessToken);
-                //this.handleQuery(vehicle, query, dest);
             })
     }
 
