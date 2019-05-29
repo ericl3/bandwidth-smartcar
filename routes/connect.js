@@ -25,12 +25,7 @@ class ConnectRouter {
         return this.smartcarClient.exchangeCode(code)
             .then((_access) => {
                 this.access = _access;
-                res.json(200);
-                this.smartcarClient.isCompatible('JTHCF1D23E5015551', ['read_location']).then(res => {
-                    this.bwClient.Message.send(res.compatible);
-                }).catch(err => {
-                    this.bwClient.Message.send(err);
-                })
+                res.json({ msg: "OK - Logged in" });
                 this.createVehicle();
             });
     }
