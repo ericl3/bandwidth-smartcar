@@ -1,0 +1,37 @@
+html{
+    font-family: 'Overpass', sans-serif !important;
+}
+
+body{
+    
+    background-image: url("Frame.png");
+    background-size: cover;
+    color: #00fbb9;
+    font-family: 'Overpass', sans-serif !important;
+}
+
+#link{
+    background-color: #00fbb9;
+    border-radius: 21px;
+    border-color: none;
+    color: white;
+}
+
+.center-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lighter{
+    font-weight: lighter;
+}
+
+.white{
+    color:white;
+}
+
+.full-height{
+    height: 80vh;
+}

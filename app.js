@@ -10,6 +10,12 @@ const keys = require("./config/keys");
 const app = express().use(cors());
 const PORT = process.env.PORT || 8080;
 
+// set view engine
+app.set('view engine', 'pug')
+
+// set up stylesheet
+app.use(express.static(__dirname + '/public'));
+
 // Bring in routes
 //const ReceiveQueriesRouter = require("./routes/receive-query");
 const ConnectRouter = require("./routes/connect");
@@ -42,7 +48,8 @@ app.use("/connect", connect.router);
 
 // Home page GET
 app.get("/", (req, res) => {
-    res.json({ msg: "go to /connect to connect your car to the smartcar portal" });
+    // res.json({ msg: "go to /connect to connect your car to the smartcar portal" });
+    res.render('index');
 })
 
 app.listen(PORT, () => {

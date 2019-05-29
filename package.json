@@ -11,6 +11,8 @@
     "cors": "^2.8.5",
     "express": "^4.16.3",
     "node-bandwidth": "^3.0.2",
+    "nodemon": "^1.19.1",
+    "pug": "^2.0.3",
     "smartcar": "^6.0.0"
   }
 }
